@@ -1,0 +1,24 @@
+{
+  "name": "jcorporate",
+  "version": "1.0.0",
+  "description": "Site de partage de documents, vidéo et contenus",
+  "main": "index.js",
+  "scripts": {
+    "sass-main": "sass --watch ./sass/main.scss:./assets/css/style.css",
+    "sass-header": "sass --watch ./sass/layout/header.scss:./assets/css/header.css",
+    "sass-footer": "sass --watch ./sass/layout/footer.scss:./assets/css/footer.css",
+    "prefix": "postcss ./assets/css/style.css --use autoprefixer -d ./assets/css/prefixed/",
+    "prefix-page": "postcss ./assets/css/style-autre-page.css --use autoprefixer -d ./assets/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjandia/JCorporate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjandia/Jcorporate/issues"
+  },
+  "homepage": "https://github.com/mjandia/Jcorporate#readme",
+  "browserslist": "last 4 versions",
+  "author": "Vidal Bravo - Jandia Miguel",
+  "license": "ISC"
+}
