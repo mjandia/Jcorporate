@@ -131,16 +131,26 @@ article
 	object-position: center;
 	z-index: -1;
 }
-#carousel .tagLine
+#carousel .text
 {
-    color: white;
+    color: orange;
+    background: white;
     z-index: 1;
     font-size: 2.7em;
+    padding: 5px;
+}
+#carousel p 
+{
+    color: orange;
+    background: white;
+    z-index: 1;
+    font-size: 2.7em;
+    padding: 5px;
 }
 #carousel .arrow_left
 {
-    width: 150px;
-    height: 80px;
+    width: 80px;
+    height: 100px;
     position: absolute;
     z-index: 1;
     left: 10px;
@@ -149,20 +159,39 @@ article
 }
 #carousel .arrow_right
 {
-    width: 150px;
-    height: 80px;
+    width: 80px;
+    height: 100px;
     position: absolute;
     z-index: 1;
-    right: -120px;
+    right: -50px;
     top: 200px;
     color: white;
 }
-/* Les images */
-.image, p
+.dots
 {
-    text-align: justify;
-    padding: 15px;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
 }
+.dot
+{
+    margin: 0 10px 0 0;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid orange;
+    cursor: pointer;
+}
+.dot-selected
+{
+    background-color: #B67332;
+}
+#carousel span
+{
+    display: block;
+    font-size: 20px;
+}
+/* Les images */
 img
 {
     object-fit: cover;
@@ -197,4 +226,8 @@ img
 {
 	background-color: #4194bc;
     color: white;
+}
+p
+{
+padding: 10px;
 }
