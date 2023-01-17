@@ -24,11 +24,10 @@ const nomElement = document.querySelector('#carousel > .tagLine');
 const nomfirstTagLineElement = document.querySelector('#carousel > .text');
 
 i = 0;
-numberOfSlide = slides.length;
 
 left.addEventListener('click', function() {
     if (i === 0) {
-        i = numberOfSlide - 1;
+        i = slides.length - 1;
     } else {
         i--
     }
@@ -37,7 +36,7 @@ left.addEventListener('click', function() {
 });
 
 right.addEventListener('click', function() {
-    if (i === numberOfSlide -1) {
+    if (i === slides.length -1) {
         i = 0;
     } else {
         i++
@@ -58,7 +57,7 @@ showSlide();
 
 function dotsShow () {
     const dots = document.querySelector('.dots'); 
-    for (let j =0; j < numberOfSlide; j++) {
+    for (let j =0; j < slides.length; j++) {
     const dot = document.createElement('span');
     dot.id = 'span' + j;
     dot.addEventListener('click', function(event) {
