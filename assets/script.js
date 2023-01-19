@@ -23,7 +23,7 @@ const imageElement = document.querySelector('#carousel > img');
 const nomElement = document.querySelector('#carousel > .tagLine');
 const nomfirstTagLineElement = document.querySelector('#carousel > .text');
 
-i = 0;
+let i = 0;
 
 left.addEventListener('click', function() {
     if (i === 0) {
@@ -32,7 +32,6 @@ left.addEventListener('click', function() {
         i--
     }
     showSlide();
-    console.log(left);
 });
 
 right.addEventListener('click', function() {
@@ -42,26 +41,20 @@ right.addEventListener('click', function() {
         i++
     }
     showSlide();
-    console.log(right);
 });
-
 function showSlide() {
     imageElement.src = `./assets/images/${slides[i].image}`;
     nomElement.innerHTML = slides[i].tagLine;
     nomfirstTagLineElement.innerHTML = slides[i].text;
-    console.log(imageElement);
-	console.log(nomElement);
-    console.log(nomfirstTagLineElement);
 }
-showSlide();
 
 function dotsShow () {
     const dots = document.querySelector('.dots'); 
     for (let j =0; j < slides.length; j++) {
-    const dot = document.createElement('span');
-    dot.id = 'span' + j;
+    const dot = document.createElement('div');
+    dot.id = 'div' + j;
     dot.addEventListener('click', function(event) {
-    i = Number(event.target.id.replace('span', ''));
+    i = Number(event.target.id.replace('div', ''));
     showSlide();
     });
     dot.classList.add('dot');
